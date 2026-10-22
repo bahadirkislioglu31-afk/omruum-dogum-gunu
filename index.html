@@ -58,8 +58,8 @@ footer{text-align:center;padding:35px 20px 50px;color:#a24d6c}
     <p class="subtitle">İyi ki bu dünyaya gelmişsin, iyi ki yollarımız kesişmiş…<br>Bugün senin günün, ama benim en güzel hediyem sensin. ❤️</p>
     <button class="btn" onclick="document.getElementById('mektup').scrollIntoView({behavior:'smooth'})">Sana bir şey hazırladım 💌</button>
     <div class="music-box">
-      <button class="btn secondary" id="musicBtn" type="button">♫ Müziği başlat</button>
-      <div class="note">Küçük not: Tarayıcıların müzik için butona dokunmanı istemesi normaldir.</div>
+      <button class="btn secondary" type="button" onclick="document.getElementById('muzik').scrollIntoView({behavior:'smooth'})">♫ Bizim şarkımızı dinle</button>
+      <div class="note">Kum – Sevdalım ❤️ Dinlemek için aşağıdaki oynat düğmesine dokun.</div>
     </div>
   </div>
 </header>
@@ -80,6 +80,27 @@ footer{text-align:center;padding:35px 20px 50px;color:#a24d6c}
     <div class="photo has-image"><img src="IMG-20260804-WA0003.jpg" alt="Ömrümmm ile güzel bir anımız 10" loading="lazy"></div>
   </div>
   <p class="note" style="text-align:center">Bu fotoğraflar, doğum günü sürprizimizin en güzel anıları. ❤️</p>
+</section>
+
+
+<section id="muzik">
+  <h2 class="section-title">Bizim şarkımız 🎶</h2>
+  <p class="section-intro">Kum – Sevdalım. Bu şarkı da bizim güzel anılarımıza eşlik etsin, Ömrümmm. ❤️</p>
+  <div class="card" style="max-width:760px;margin:0 auto;padding:14px">
+    <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#fce7ef">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/rmHxaefresE"
+        title="Kum - Sevdalım (Official Lyric Video)"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="note" style="text-align:center;margin:14px 0 2px">Müzik otomatik başlamazsa oynat düğmesine basman yeterli. 💗</p>
+    <p style="text-align:center;margin:8px 0 0"><a href="https://www.youtube.com/watch?v=rmHxaefresE" target="_blank" rel="noopener noreferrer" style="color:#b72f5d;font-weight:700">YouTube'da aç ↗</a></p>
+  </div>
 </section>
 
 <section id="mektup">
@@ -109,10 +130,6 @@ Yeni yaşın sana kalbin kadar güzel günler, huzur, sağlık, kahkaha ve gerç
   <span>İyi ki doğdun, Ömrümmm.</span>
 </footer>
 
-<!-- İsteğe bağlı müzik: kendi MP3 dosyanı music.mp3 adıyla bu HTML dosyasının yanına koy. -->
-<audio id="bgMusic" loop preload="none">
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
 <script>
 const hearts = ['♡','♥','💕','💗'];
 function floatHeart(){
@@ -128,15 +145,6 @@ function floatHeart(){
 }
 setInterval(floatHeart,850);
 
-const audio=document.getElementById('bgMusic'), musicBtn=document.getElementById('musicBtn');
-let musicStarted=false;
-musicBtn.addEventListener('click',async()=>{
-  if(!musicStarted){
-    try{await audio.play();musicStarted=true;musicBtn.textContent='Ⅱ Müziği duraklat';}
-    catch(e){alert('Müzik dosyası bulunamadı ya da açılamadı. HTML dosyasının yanına music.mp3 isimli bir MP3 dosyası ekle.');}
-  }else if(audio.paused){try{await audio.play();musicBtn.textContent='Ⅱ Müziği duraklat';}catch(e){}}
-  else{audio.pause();musicBtn.textContent='♫ Müziği başlat';}
-});
 document.getElementById('surpriseBtn').addEventListener('click',()=>{
   const surprise=document.getElementById('surprise');
   surprise.classList.toggle('hidden');
