@@ -56,7 +56,8 @@ footer{text-align:center;padding:35px 20px 50px;color:#a24d6c}
     <div class="eyebrow">Dünyadaki en güzel tesadüfüme</div>
     <h1>İyi ki doğdun,<br>Ömrümmm</h1>
     <p class="subtitle">İyi ki bu dünyaya gelmişsin, iyi ki yollarımız kesişmiş…<br>Bugün senin günün, ama benim en güzel hediyem sensin. ❤️</p>
-    <button class="btn" onclick="document.getElementById('mektup').scrollIntoView({behavior:'smooth'})">Sana bir şey hazırladım 💌</button>
+    <button class="btn" id="startSurpriseBtn" type="button">Sürprizini aç ❤️</button>
+    <p id="heroSurprise" class="note hidden" style="font-size:15px;margin-top:18px">İyi ki varsın, Ömrümmm… Bu şarkı bizim için çalsın. 💗</p>
     <div class="music-box">
       <button class="btn secondary" type="button" onclick="document.getElementById('muzik').scrollIntoView({behavior:'smooth'})">♫ Bizim şarkımızı dinle</button>
       <div class="note">Kum – Sevdalım ❤️ Dinlemek için aşağıdaki oynat düğmesine dokun.</div>
@@ -89,7 +90,7 @@ footer{text-align:center;padding:35px 20px 50px;color:#a24d6c}
   <div class="card" style="max-width:760px;margin:0 auto;padding:14px">
     <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#fce7ef">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/rmHxaefresE"
+        src="https://www.youtube-nocookie.com/embed/rmHxaefresE?enablejsapi=1&playsinline=1"
         title="Kum - Sevdalım (Official Lyric Video)"
         style="position:absolute;inset:0;width:100%;height:100%;border:0"
         loading="lazy"
@@ -98,8 +99,7 @@ footer{text-align:center;padding:35px 20px 50px;color:#a24d6c}
         allowfullscreen>
       </iframe>
     </div>
-    <p class="note" style="text-align:center;margin:14px 0 2px">Müzik otomatik başlamazsa oynat düğmesine basman yeterli. 💗</p>
-    <p style="text-align:center;margin:8px 0 0"><a href="https://www.youtube.com/watch?v=rmHxaefresE" target="_blank" rel="noopener noreferrer" style="color:#b72f5d;font-weight:700">YouTube'da aç ↗</a></p>
+    <p class="note" style="text-align:center;margin:14px 0 2px">Şarkı burada, sitenin içinde çalar. ❤️</p>
   </div>
 </section>
 
@@ -144,6 +144,21 @@ function floatHeart(){
   setTimeout(()=>el.remove(),10500);
 }
 setInterval(floatHeart,850);
+
+document.getElementById('startSurpriseBtn').addEventListener('click',()=>{
+  const note=document.getElementById('heroSurprise');
+  note.classList.remove('hidden');
+  const frame=document.querySelector('#muzik iframe');
+  const musicSection=document.getElementById('muzik');
+  // Play the embedded video from this user click; remain on this page.
+  frame.contentWindow.postMessage(JSON.stringify({
+    event:'command',
+    func:'playVideo',
+    args:''
+  }), '*');
+  musicSection.scrollIntoView({behavior:'smooth',block:'start'});
+  for(let i=0;i<18;i++)setTimeout(floatHeart,i*90);
+});
 
 document.getElementById('surpriseBtn').addEventListener('click',()=>{
   const surprise=document.getElementById('surprise');
