@@ -2,170 +2,110 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#fff0f4">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#16060c">
 <title>İyi ki Doğdun Ömrümmm ❤️</title>
+
 <style>
-:root{--pink:#ff6f91;--deep:#a7194b;--cream:#fff8f7;--ink:#54283b}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:linear-gradient(180deg,#fff0f4,#fff9f5 50%,#ffe8ef);overflow-x:hidden}
-button{font:inherit;cursor:pointer}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px 20px;position:relative;isolation:isolate;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,#fff 0 2px,transparent 3px),radial-gradient(circle at 80% 35%,#fff 0 2px,transparent 3px);opacity:.9;z-index:-1}
-.hero-inner{max-width:720px;animation:rise 1.1s ease both}
-.eyebrow{letter-spacing:.18em;text-transform:uppercase;font:600 11px Arial,sans-serif;color:#bd5477}
-h1{font-size:clamp(3rem,12vw,6.8rem);line-height:.98;color:var(--deep);margin:18px 0;text-shadow:0 5px 22px #ffb3c755}
-.subtitle{font-size:clamp(1.1rem,4vw,1.5rem);line-height:1.6;max-width:560px;margin:0 auto 28px}
-.heart-mark{font-size:3rem;display:inline-block;animation:pulse 1.5s infinite}
-.btn{border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,#ff8eaa,#e84f7b);color:white;box-shadow:0 8px 22px #d83d7040;transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.secondary{background:#fff;color:var(--deep);border:1px solid #f5b4c7;box-shadow:none}
-section{padding:70px 20px;max-width:1000px;margin:auto}
-.section-title{text-align:center;color:var(--deep);font-size:clamp(2rem,7vw,3.2rem);margin:0 0 12px}
-.section-intro{text-align:center;line-height:1.7;max-width:650px;margin:0 auto 30px;color:#805468}
-.card{background:#ffffffb8;border:1px solid #ffffff;box-shadow:0 15px 45px #9e31501a;border-radius:26px;padding:clamp(22px,5vw,42px)}
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.photo{border:1px solid #f4c5d3;background:linear-gradient(145deg,#ffe2eb,#fff8f7);border-radius:18px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0;position:relative;overflow:hidden;box-shadow:0 8px 22px #d83d7012}
-.photo input{display:none}
-.photo .placeholder{font-size:2rem;margin-bottom:8px}
-.photo small{font:12px/1.5 Arial,sans-serif;color:#9d5b72}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.photo.has-image img{display:block}
-.photo.has-image .placeholder,.photo.has-image small,.photo.has-image input{display:none}
-.photo .remove{display:none}
-.photo.has-image .remove{display:none}
-.letter{font-size:1.12rem;line-height:1.95;white-space:pre-line}
-.signature{font-size:1.5rem;color:var(--deep);text-align:right;margin-top:25px;font-style:italic}
-.music-box{text-align:center;margin-top:24px}
-.note{font:13px/1.6 Arial,sans-serif;color:#966176;margin-top:10px}
-footer{text-align:center;padding:35px 20px 50px;color:#a24d6c}
-.float-heart{position:fixed;bottom:-40px;z-index:5;pointer-events:none;animation:floatUp linear forwards;opacity:.8}
+body{
+ margin:0;color:#ffeaf0;
+ font-family:Georgia,serif;
+ background:linear-gradient(180deg,#10070c,#300817,#16060c);
+ overflow-x:hidden
+}
+.hero{
+ min-height:100svh;display:flex;align-items:center;
+ justify-content:center;text-align:center;padding:30px 18px;
+ position:relative;overflow:hidden;
+ background:radial-gradient(ellipse at center,#65112b 0%,#260713 48%,#10070c 100%)
+}
+.hero-inner{max-width:760px;position:relative;z-index:1}
+.eyebrow{color:#e9a0b5;letter-spacing:3px;font:12px Arial}
+h1{
+ color:#ffb4ca;font-size:clamp(3rem,12vw,6rem);
+ line-height:1.05;margin:24px 0;
+ text-shadow:0 0 12px #ff477a,0 0 38px #c21850
+}
+.subtitle{font-size:clamp(17px,4vw,23px);line-height:1.8}
+.heart-mark{font-size:65px;color:#ff477a;animation:pulse 1.5s infinite}
+.btn{
+ border:1px solid #ff8eae;border-radius:40px;padding:14px 23px;
+ color:white;background:linear-gradient(135deg,#a20f3e,#4d0922);
+ font-size:16px;cursor:pointer;box-shadow:0 0 22px #e91e6344;
+ margin:8px
+}
+.btn.secondary{background:#1b0911}
+section{max-width:1000px;margin:auto;padding:65px 18px}
+.section-title{text-align:center;color:#ffabc4;font-size:clamp(30px,7vw,46px)}
+.section-intro{text-align:center;line-height:1.8;color:#e5b7c6;margin-bottom:30px}
+.card{
+ background:linear-gradient(145deg,#35101f,#1b0a12);
+ border:1px solid #812541;border-radius:24px;
+ padding:clamp(20px,5vw,38px);
+ box-shadow:0 0 30px #e91e6315
+}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.photo{overflow:hidden;border-radius:16px;border:1px solid #a13b5c;background:#260b17}
+.photo img{width:100%;height:100%;min-height:190px;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .5s}
+.photo img:hover{transform:scale(1.05)}
+.letter{font-size:17px;line-height:2;white-space:pre-line}
+.signature{text-align:right;color:#ffabc4;font-size:23px;margin-top:25px;font-style:italic}
+.note{text-align:center;color:#dba1b5;font:13px/1.8 Arial;margin-top:15px}
+.music{width:100%;aspect-ratio:16/9;border:0;border-radius:15px}
+footer{text-align:center;padding:35px 15px 50px;color:#e9a0b5}
 .hidden{display:none!important}
-#surprise{margin-top:22px;font-size:1.2rem;line-height:1.8;color:var(--deep);animation:rise .8s ease both}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
-@media(max-width:620px){section{padding:52px 16px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{min-height:190px;aspect-ratio:3/4}.letter{font-size:1.04rem}.hero{min-height:94svh}}
+#surprise{color:#ffabc4;text-align:center;line-height:1.9;font-size:20px;margin-top:25px}
+.petal{position:fixed;top:-35px;z-index:5;pointer-events:none;
+ animation:fall linear forwards;text-shadow:0 0 12px #ff477a}
+.spark{position:fixed;pointer-events:none;z-index:6;
+ animation:rise 2s ease-out forwards}
+@keyframes pulse{50%{transform:scale(1.16);text-shadow:0 0 35px #ff477a}}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}
+@keyframes rise{to{transform:translateY(-120px) scale(1.7);opacity:0}}
+@media(max-width:500px){.gallery{gap:9px}.photo img{min-height:155px}}
 </style>
 </head>
+
 <body>
 <header class="hero" id="home">
-  <div class="hero-inner">
-    <div class="heart-mark" aria-hidden="true">♡</div>
-    <div class="eyebrow">Dünyadaki en güzel tesadüfüme</div>
-    <h1>İyi ki doğdun,<br>Ömrümmm</h1>
-    <p class="subtitle">İyi ki bu dünyaya gelmişsin, iyi ki yollarımız kesişmiş…<br>Bugün senin günün, ama benim en güzel hediyem sensin. ❤️</p>
-    <button class="btn" id="startSurpriseBtn" type="button">Sürprizini aç ❤️</button>
-    <p id="heroSurprise" class="note hidden" style="font-size:15px;margin-top:18px">İyi ki varsın, Ömrümmm… Bu şarkı bizim için çalsın. 💗</p>
-    <div class="music-box">
-      <button class="btn secondary" type="button" onclick="document.getElementById('muzik').scrollIntoView({behavior:'smooth'})">♫ Bizim şarkımızı dinle</button>
-      <div class="note">Kum – Sevdalım ❤️ Dinlemek için aşağıdaki oynat düğmesine dokun.</div>
-    </div>
-  </div>
+<div class="hero-inner">
+<div class="heart-mark">♡</div>
+<div class="eyebrow">DÜNYADAKİ EN GÜZEL TESADÜFÜME</div>
+<h1>İyi ki doğdun,<br>Ömrümmm ❤️</h1>
+<p class="subtitle">
+İyi ki bu dünyaya gelmişsin, iyi ki yollarımız kesişmiş…<br>
+Bugün senin günün, ama benim en güzel hediyem sensin. ❤️
+</p>
+<button class="btn" id="start">Sürprizini aç ❤️</button>
+<p id="heroSurprise" class="note hidden">
+İyi ki varsın, Ömrümmm… Bu şarkı bizim için çalsın. 💗
+</p>
+<p>
+<button class="btn secondary" onclick="document.getElementById('muzik').scrollIntoView({behavior:'smooth'})">
+♫ Bizim şarkımızı dinle
+</button>
+</p>
+<p class="note">Kum – Sevdalım ❤️</p>
+</div>
 </header>
 
 <section id="galeri">
-  <h2 class="section-title">Bizden küçük anılar 📸</h2>
-  <p class="section-intro">Birlikte biriktirdiğimiz güzel anılar… Her fotoğraf, kalbimde sakladığım ayrı bir mutluluk. ❤️</p>
-  <div class="gallery">
-    <div class="photo has-image"><img src="IMG-20260530-WA0034.jpg" alt="Ömrümmm ile güzel bir anımız 1" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260530-WA0038.jpg" alt="Ömrümmm ile güzel bir anımız 2" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260601-WA0009.jpg" alt="Ömrümmm ile güzel bir anımız 3" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260604-WA0040.jpg" alt="Ömrümmm ile güzel bir anımız 4" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260607-WA0082.jpg" alt="Ömrümmm ile güzel bir anımız 5" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260611-WA0304.jpg" alt="Ömrümmm ile güzel bir anımız 6" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260612-WA0004.jpg" alt="Ömrümmm ile güzel bir anımız 7" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260618-WA0005.jpg" alt="Ömrümmm ile güzel bir anımız 8" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260713-WA0201.jpg" alt="Ömrümmm ile güzel bir anımız 9" loading="lazy"></div>
-    <div class="photo has-image"><img src="IMG-20260804-WA0003.jpg" alt="Ömrümmm ile güzel bir anımız 10" loading="lazy"></div>
-  </div>
-  <p class="note" style="text-align:center">Bu fotoğraflar, doğum günü sürprizimizin en güzel anıları. ❤️</p>
-</section>
-
-
-<section id="muzik">
-  <h2 class="section-title">Bizim şarkımız 🎶</h2>
-  <p class="section-intro">Kum – Sevdalım. Bu şarkı da bizim güzel anılarımıza eşlik etsin, Ömrümmm. ❤️</p>
-  <div class="card" style="max-width:760px;margin:0 auto;padding:14px">
-    <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#fce7ef">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/rmHxaefresE?enablejsapi=1&playsinline=1"
-        title="Kum - Sevdalım (Official Lyric Video)"
-        style="position:absolute;inset:0;width:100%;height:100%;border:0"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <p class="note" style="text-align:center;margin:14px 0 2px">Şarkı burada, sitenin içinde çalar. ❤️</p>
-  </div>
-</section>
-
-<section id="mektup">
-  <h2 class="section-title">Kalbimden sana… 💌</h2>
-  <p class="section-intro">Belki kelimeler hissettiklerimin hepsini anlatamaz ama yine de denemek istedim.</p>
-  <div class="card">
-    <div class="letter">Ömrümmm,
-
-Bugün senin doğum günün… Ama ben bugün sadece doğduğun için değil, hayatıma dokunduğun için de şükrediyorum. Seninle geçen zaman bana küçücük anların bile ne kadar kıymetli olabileceğini öğretti. Bir gülüşün, sesin, bana bakışın… Bazen bütün günümü güzelleştirmeye yetiyor.
-
-Birlikte geçirdiğimiz bu zamanın her anısı kalbimde ayrı bir yerde. Her şeyin kusursuz olmasına gerek yok; yeter ki güzel günlerde de zor günlerde de birbirimizi anlamaya, dinlemeye ve el ele yürümeye devam edelim.
-
-Yeni yaşın sana kalbin kadar güzel günler, huzur, sağlık, kahkaha ve gerçekleşen hayaller getirsin. Dilerim yüzün hep gülsün ve kendini ne kadar özel, değerli ve sevildiğini her zaman hatırla.
-
-İyi ki doğdun sevgilim. İyi ki varsın. Daha yaşayacağımız çok güzel anımız, kutlayacağımız nice doğum günümüz olsun. Seni bugün de, yarın da, her geçen gün daha güzel sevmek istiyorum.</div>
-    <div class="signature">Seni çok seven, ben. ❤️</div>
-  </div>
-  <div style="text-align:center;margin-top:28px">
-    <button class="btn" id="surpriseBtn" type="button">Bir de son bir şey var… 💝</button>
-    <div id="surprise" class="hidden">Dünyada milyarlarca insan var ama benim kalbim seni seçti, Ömrümmm. <br>Nice yaşlarına, nice “biz”lere… ❤️🎂</div>
-  </div>
-</section>
-
-<footer>
-  <div style="font-size:1.8rem">♡</div>
-  <p>Bu küçük sayfa, sana kocaman bir sevgiden yapıldı.</p>
-  <span>İyi ki doğdun, Ömrümmm.</span>
-</footer>
-
-<script>
-const hearts = ['♡','♥','💕','💗'];
-function floatHeart(){
-  const el=document.createElement('span');
-  el.className='float-heart';
-  el.textContent=hearts[Math.floor(Math.random()*hearts.length)];
-  el.style.left=(Math.random()*100)+'vw';
-  el.style.fontSize=(16+Math.random()*22)+'px';
-  el.style.animationDuration=(5+Math.random()*5)+'s';
-  el.style.color=['#e84f7b','#ff8eaa','#bd5477'][Math.floor(Math.random()*3)];
-  document.body.appendChild(el);
-  setTimeout(()=>el.remove(),10500);
-}
-setInterval(floatHeart,850);
-
-document.getElementById('startSurpriseBtn').addEventListener('click',()=>{
-  const note=document.getElementById('heroSurprise');
-  note.classList.remove('hidden');
-  const frame=document.querySelector('#muzik iframe');
-  const musicSection=document.getElementById('muzik');
-  // Play the embedded video from this user click; remain on this page.
-  frame.contentWindow.postMessage(JSON.stringify({
-    event:'command',
-    func:'playVideo',
-    args:''
-  }), '*');
-  musicSection.scrollIntoView({behavior:'smooth',block:'start'});
-  for(let i=0;i<18;i++)setTimeout(floatHeart,i*90);
-});
-
-document.getElementById('surpriseBtn').addEventListener('click',()=>{
-  const surprise=document.getElementById('surprise');
-  surprise.classList.toggle('hidden');
-  document.getElementById('surpriseBtn').textContent=surprise.classList.contains('hidden')?'Bir de son bir şey var… 💝':'Seni çok seviyorum! ❤️';
-  for(let i=0;i<16;i++)setTimeout(floatHeart,i*90);
-});
-</script>
-</body>
-</html>
+<h2 class="section-title">Bizden küçük anılar 📸</h2>
+<p class="section-intro">
+Birlikte biriktirdiğimiz güzel anılar… Her fotoğraf, kalbimde sakladığım ayrı bir mutluluk. ❤️
+</p>
+<div class="gallery">
+<div class="photo"><img src="IMG-20260530-WA0034.jpg" alt="Anımız 1" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260530-WA0038.jpg" alt="Anımız 2" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260601-WA0009.jpg" alt="Anımız 3" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260604-WA0040.jpg" alt="Anımız 4" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260607-WA0082.jpg" alt="Anımız 5" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260611-WA0304.jpg" alt="Anımız 6" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260612-WA0004.jpg" alt="Anımız 7" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260618-WA0005.jpg" alt="Anımız 8" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260713-WA0201.jpg" alt="Anımız 9" loading="lazy"></div>
+<div class="photo"><img src="IMG-20260804-WA0003.jpg" alt="Anımız 10" loading="lazy"></div>
+</div>
+<p class="note">Her fotoğraf, kal
